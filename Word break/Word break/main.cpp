@@ -49,6 +49,8 @@ public:
                     {
                         dp[i] = (std::find(dict.begin(), dict.end(), s.substr(j + 1, i - j)) != dict.end()) | dp[i];
                     }
+                    if (dp[i])
+                        break;
                 }
             }
         }
